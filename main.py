@@ -9,3 +9,4 @@ while True:
             print(pogoci)
             print("pobijedili ste")
             break
+            ighfdighdljkak
