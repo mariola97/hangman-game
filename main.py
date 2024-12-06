@@ -24,13 +24,13 @@ otkrivanjeRijeci = ['_' if slovo.isalpha() else slovo for slovo in skrivenaRijec
 
 def updateOtkrivanje(slovo, skrRjLower, otkrivanjeRijeci): #Funkcija za updateanje slova u skrivenoj rijeci
   update = False
-  for i, char in enumerate (skrRjLower): #Napravljen loop koji ide kroz svako slovo u skrivenoj rijeci if char == slovo:
+  for i, char in enumerate(skrRjLower): #Napravljen loop koji ide kroz svako slovo u skrivenoj rijeci if char == slovo:
     if char == slovo:
       otkrivanjeRijeci[i] = skrivenaRijec[i]
       update = True
   return update
 
-def provjera (otkrivanjeRijeci, skrivenaRijec): #Provjera je li korisnik pobjedio
+def provjera(otkrivanjeRijeci, skrivenaRijec): #Provjera je li korisnik pobjedio
   return "".join(otkrivanjeRijeci) == skrivenaRijec
 
 def prikazStanja(otkrivanjeRijeci):
@@ -39,7 +39,7 @@ def prikazStanja(otkrivanjeRijeci):
 pokusaji = 0
 netocnaSlova = []
 while True:
-  print(f"Kategorija {kategorije[prikazStanja]}")
+  print(f"Kategorija: {kategorije[prikazKategorije]}")
   print(f"\n{prikazStanja(otkrivanjeRijeci)}")
   unosSlova = input("\nUnesi slovo: ").lower()
   if unosSlova in netocnaSlova or unosSlova in "".join(otkrivanjeRijeci):
